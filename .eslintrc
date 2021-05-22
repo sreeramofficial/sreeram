@@ -1,0 +1,90 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended"
+  ],
+  "rules": {
+    "no-multiple-empty-lines": [
+      2,
+      {
+        "max": 1,
+        "maxEOF": 1
+      }
+    ],
+    "eqeqeq": "error",
+    "object-curly-spacing": [
+      "error",
+      "always"
+    ],
+    "block-scoped-var": 1,
+    "no-alert": 2,
+    "no-else-return": 2,
+    "no-empty-function": 2,
+    "no-empty-pattern": 2,
+    "no-magic-numbers": 1,
+    "no-multi-spaces": 2,
+    "global-require": 1,
+    "handle-callback-err": 2,
+    "no-mixed-requires": 2,
+    "array-bracket-spacing": [
+      2,
+      "always"
+    ],
+    "block-spacing": 2,
+    "camelcase": 2,
+    "comma-dangle": [
+      2,
+      "always-multiline"
+    ],
+    "comma-spacing": [
+      2,
+      {
+        "before": false,
+        "after": true
+      }
+    ],
+    "implicit-arrow-linebreak": [
+      2,
+      "beside"
+    ],
+    "indent": [
+      2,
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "jsx-quotes": [
+      2,
+      "prefer-single"
+    ],
+    "eol-last": [
+      "error",
+      "always"
+    ],
+    "react/jsx-closing-bracket-location": [
+      "error",
+      "after-props"
+    ],
+    "react/prop-types": 0,
+    "react/display-name": 0
+  },
+  "settings": {
+    "react": {
+      "version": "16.0"
+    }
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "jasmine": true,
+    "jest": true
+  }
+}
