@@ -3,7 +3,7 @@
 const domain = process.env.NEXT_PUBLIC_DOMAIN;
 
 module.exports = {
-  title: "Project Orange",
+  title: "Project Icarus",
   description: "Description",
   seo: {
     author: "Sreeram Padmanabhan",

@@ -82,3 +82,4 @@ _configrc
 public/static/manifest.json
 public/service-worker.js
 public/workbox-*.js
+.src

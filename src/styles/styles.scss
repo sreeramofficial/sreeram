@@ -1,0 +1,106 @@
+:root {
+  --animate-up-down: {
+    animation: up-down 1.4s infinite ease-in-out alternate;
+  }
+}
+
+.animate-up-down {
+  animation: up-down 1.4s infinite ease-in-out alternate;
+}
+
+img {
+  width: 100%;
+}
+
+.img {
+  width: 100%;
+};
+
+.img--center {
+  height: 200px;
+  margin: auto;
+  @extend .animate-up-down;
+}
+
+.img--grow {
+  @media (max-width: 600px) {
+    width: calc(100% + 30px);
+    margin: -15px -15px 15px -15px;
+  }
+}
+
+.img--left {
+  float: left;
+  @media (min-width: 600px) {
+    max-width: 300px;
+    margin: 0 15px 15px 0;
+  }
+}
+
+._shimmer {
+  color: rgba(255, 255, 255, 0.3);
+  background: -webkit-gradient(linear, left top, right top, from(#5B5B5B), to(#5B5B5B), color-stop(0.8, #C6C6C6));
+  background: -moz-gradient(linear, left top, right top, from(#5B5B5B), to(#5B5B5B), color-stop(0.8, #C6C6C6));
+  background: gradient(linear, left top, right top, from(#5B5B5B), to(#5B5B5B), color-stop(0.8, #C6C6C6));
+  background-size: 50px 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-color: rgba(198, 198, 198, 0.3);
+  -webkit-animation: shimmer 4s infinite;
+  animation: shimmer 4s infinite;
+}
+
+@-webkit-keyframes shimmer {
+  0% {
+    background-position: calc(0% - 50px) 0%; }
+  100% {
+    background-position: calc(100% + 50px) 0%; }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: calc(0% - 50px) 0%; }
+  100% {
+    background-position: calc(100% + 50px) 0%; }
+}
+
+@keyframes up-down{
+  from{
+    transform: translatey(0px);
+  }
+  to{
+    transform: translatey(-20px);
+  }
+}
+
+pre {
+  font-size: 12px;
+  padding: 10px;
+  background: #eceff1;
+  overflow: scroll;
+}
+
+#payment-form {
+  padding: 10px;
+  width: 100%;
+}
+
+#card-element {
+  border-radius: 4px 4px 0 0;
+  padding: 12px;
+  border: 1px solid rgba(50, 50, 93, 0.1);
+  max-height: 44px;
+  width: 100%;
+  background: white;
+  box-sizing: border-box;
+}
+
+#submit {
+  margin-bottom: 10px;
+}
+
+.hidden {
+  display: none;
+}

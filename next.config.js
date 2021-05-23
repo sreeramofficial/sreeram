@@ -1,11 +1,14 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
+const withPlugins = require('next-compose-plugins');
 const withPWA = require('next-pwa');
+const withTM = require('next-transpile-modules')(['@sreeram.io/alpha']);
 const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 const path = require('path');
-const runtimeCaching = require('./runtimeCaching');
-const { seed } = require('./config');
 
-module.exports = withPWA({
+const runtimeCaching = require('./src/runtimeCaching');
+const { seed } = require('./src/config');
+
+const nextConfig = {
   productionBrowserSourceMaps: true,
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
     config.module.rules.push(
@@ -59,4 +62,6 @@ module.exports = withPWA({
     runtimeCaching,
     //...
   },
-});
+};
+
+module.exports = withPlugins([ withTM, withPWA ], nextConfig);
