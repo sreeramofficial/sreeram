@@ -1,8 +1,8 @@
 version: '3.4'
 services:
-  market:
+  icarus:
     build:
       context: .
-      target: at-market
+      target: icarus
     ports:
-      - 3000:3000
+      - 3001:3001

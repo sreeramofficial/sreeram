@@ -1,20 +1,24 @@
 {
-  "name": "project-orange",
+  "name": "project-icarus",
   "version": "0.1.0",
   "private": false,
   "scripts": {
-    "clean": "rm -rf node_modules",
-    "setup": "npm run clean && npm ci",
+    "setup": "npm ci",
     "dev": "next dev -p 3001",
     "debug": "NODE_OPTIONS='--inspect' next dev -p 3001",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p 3001",
     "test": "jest --coverage",
-    "lint": "eslint src --ext .ts,.tsx,.js,.jsx"
+    "lint": "eslint src --ext .ts,.tsx,.js,.jsx",
+    "docker:build": "docker build -f Dockerfile .",
+    "docker:build:icarus-builder": "docker build --target icarus-builder -t icarus-builder .",
+    "docker:build:icarus": "docker build --target icarus -t icarus . --no-cache",
+    "docker:run:icarus": "docker run -p 3000:3000 icarus",
+    "docker-compose:up": "docker-compose -f docker-compose.yml up --build"
   },
   "dependencies": {
     "@auth0/nextjs-auth0": "^1.3.1",
-    "@sreeram.io/alpha": "^0.11.0",
+    "@sreeram.io/alpha": "^0.12.0",
     "@stripe/react-stripe-js": "^1.4.1",
     "@stripe/stripe-js": "^1.15.0",
     "isbot": "^3.0.26",

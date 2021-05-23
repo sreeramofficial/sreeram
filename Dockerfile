@@ -1,4 +1,4 @@
-FROM node:dubnium-alpine AS icarus-builder
+FROM node:dubnium-alpine AS project-icarus-builder
 # RUN apk update \
 #   && apk add \
 #       libpng \
@@ -15,15 +15,15 @@ FROM node:dubnium-alpine AS icarus-builder
 #       nasm \
 #       --virtual .build-deps \
 #   && cp /usr/share/zoneinfo/Europe/Vienna /etc/localtime
-ADD package.json /icarus/
-ADD package-lock.json /icarus/
-WORKDIR /icarus/
+ADD package.json /project-icarus/
+ADD package-lock.json /project-icarus/
+WORKDIR /project-icarus/
 RUN npm run setup
 
-FROM icarus-builder AS icarus
-WORKDIR /icarus/
+FROM project-icarus-builder AS project-icarus
+WORKDIR /project-icarus/
 ENV NODE_ENV="production"
-ADD . /icarus/
+ADD . /project-icarus/
 RUN npm run build
 EXPOSE 3000/tcp
 CMD [ "npm", "start" ]

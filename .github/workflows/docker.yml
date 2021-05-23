@@ -1,0 +1,43 @@
+name: Docker build Prod
+
+on:
+  # Trigger the workflow on pull request,
+  # but only for the master branch
+  push:
+    branches:
+      - main
+
+# Environment variables used in
+env:
+  IMAGE: icarus
+  GKE_PROJECT: project-icarus-314612
+  DOCKER_REGISTRY: eu.gcr.io
+
+jobs:
+  test-build-push:
+    name: Docker Image Build
+    runs-on: ubuntu-latest
+    steps:
+
+    # Setup gcloud CLI
+    - uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
+      with:
+        version: '270.0.0'
+        service_account_email: ${{ secrets.GKE_EMAIL }}
+        service_account_key: ${{ secrets.GKE_KEY }}
+
+    # Configure docker to use the gcloud command-line tool as a credential helper
+    - run: |
+        # Set up docker to authenticate
+        # via gcloud command-line tool.
+        gcloud auth configure-docker
+    # Build a docker image with 2 tags
+    - uses: actions/checkout@v1
+    - name: Build and tag Docker image
+      run: |
+        docker build --file Dockerfile \
+          --tag $DOCKER_REGISTRY/$GKE_PROJECT/$IMAGE:${GITHUB_SHA::8} \
+          --tag $DOCKER_REGISTRY/$GKE_PROJECT/$IMAGE:latest .
+    # Push an image and all tags to Registry
+    - name: Push Image to Docker Registry
+      run: docker push -a $DOCKER_REGISTRY/$GKE_PROJECT/$IMAGE
