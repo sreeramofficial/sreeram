@@ -9,7 +9,7 @@ module.exports = {
     author: "Sreeram Padmanabhan",
     description: "Some description here",
     domain,
-    gtmId: "GTM-PBXD6SB",
+    gtmId: "GTM-5Z7T8F2",
     keywords: "",
     ogImage: `${domain}/img/og_image.png`,
     ogImageAlt: "",
