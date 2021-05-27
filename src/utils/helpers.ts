@@ -3,3 +3,6 @@ export const removeJSS = () => {
   if (jssStyles) jssStyles.parentElement.removeChild(jssStyles);
 };
 
+export const scrollToTop = (selector = window) => {
+  selector.scrollTo(0, 0);
+}
