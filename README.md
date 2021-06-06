@@ -1,4 +1,4 @@
-# Project Icarus
+# Project Sreeram
 
 Project Icarus is an open source NextJS blogging templat with the following integrations in built.
 
