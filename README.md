@@ -11,7 +11,6 @@ This is a NextJS blogging template.
 - Auth0
 - Stripe
 
-
 ## Setup
 
 Set the following environment variables and you are good to go.
