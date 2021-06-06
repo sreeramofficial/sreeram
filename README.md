@@ -52,6 +52,3 @@ Production and in `.env.local`
 npm run dev
 ```
 
-### Demo
-
-https://2jk5q.csb.app
