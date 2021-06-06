@@ -1,6 +1,6 @@
 # Project Sreeram
 
-Project Icarus is an open source NextJS blogging templat with the following integrations in built.
+Project sreeram is an open source NextJS blogging template with the following integrations in built.
 
 ## Features & Integrations
 
