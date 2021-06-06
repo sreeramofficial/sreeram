@@ -13,7 +13,10 @@ Project sreeram is an open source NextJS blogging template with the following in
 
 ## Setup
 
-Set the following environment variables and you are good to go.
+1. Clone the [repo](https://github.com/sreeramofficial/sreeram)
+
+
+2. Set the following environment variables and you are good to go.
 
 `.env`
 
