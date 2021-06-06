@@ -1,8 +1,8 @@
 # Project Icarus
 
-This is a NextJS blogging template.
+Project Icarus is an open source NextJS blogging templat with the following integrations in built.
 
-## Features
+## Features & Integrations
 
 - PWA
 - Material UI
