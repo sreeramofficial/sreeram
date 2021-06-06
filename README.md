@@ -15,7 +15,7 @@ Project sreeram is an open source NextJS blogging template with the following in
 
 1. Clone the [repo](https://github.com/sreeramofficial/sreeram)
 
-2) Set the following environment variables and you are good to go.
+2. Set the following environment variables and you are good to go.
 
 `.env`
 
@@ -53,6 +53,6 @@ npm run dev
 
 ### Demo
 
-<iframe src="https://sreeram.vercel.app" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" title="Project Sreeram"></iframe>
+<iframe src="https://sree.vercel.app" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" title="Project Sreeram"></iframe>
 
 [![Edit Project Sreeram](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/cool-sky-l38hk?fontsize=14&hidenavigation=1&theme=dark&view=preview)
