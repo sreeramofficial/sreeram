@@ -15,8 +15,7 @@ Project sreeram is an open source NextJS blogging template with the following in
 
 1. Clone the [repo](https://github.com/sreeramofficial/sreeram)
 
-
-2. Set the following environment variables and you are good to go.
+2) Set the following environment variables and you are good to go.
 
 `.env`
 
@@ -45,10 +44,13 @@ Production and in `.env.local`
     AUTH0_SCOPE=openid profile email
     MONGO_URL
     STRIPE_SECRET_KEY
-    
+
 ### Run
 
 ```bash
 npm run dev
 ```
 
+### Demo
+
+(https://l38hk.csb.app)[https://l38hk.csb.app]

@@ -3,7 +3,7 @@
 const domain = process.env.NEXT_PUBLIC_DOMAIN;
 
 module.exports = {
-  title: "Project Icarus",
+  title: "Project Sreeram",
   description: "Description",
   seo: {
     author: "Sreeram Padmanabhan",
@@ -19,7 +19,7 @@ module.exports = {
     title: "Title",
     twitterId: "",
     org: "",
-    orgImage: "",
+    orgImage: ""
   },
   seed: {
     short_name: "Title",
@@ -32,20 +32,20 @@ module.exports = {
       {
         src: "/img/icon-192.png",
         type: "image/png",
-        sizes: "192x192",
+        sizes: "192x192"
       },
       {
         src: "/img/icon-512.png",
         type: "image/png",
-        sizes: "512x512",
+        sizes: "512x512"
       },
       {
         src: "/img/maskable_icon.png",
         sizes: "196x196",
         type: "image/png",
-        purpose: "any maskable",
-      },
-    ],
+        purpose: "any maskable"
+      }
+    ]
   },
   sections: {
     "section-1": {
@@ -57,9 +57,9 @@ module.exports = {
       links: [
         {
           route: "/section-1/post",
-          title: "Post",
-        },
-      ],
+          title: "Post"
+        }
+      ]
     },
     "section-2": {
       route: "/section-2",
@@ -70,9 +70,9 @@ module.exports = {
       links: [
         {
           route: "/section-2/post",
-          title: "Post",
-        },
-      ],
+          title: "Post"
+        }
+      ]
     },
     "section-3": {
       route: "/section-3",
@@ -83,9 +83,9 @@ module.exports = {
       links: [
         {
           route: "/section-3/post",
-          title: "Post",
-        },
-      ],
-    },
-  },
+          title: "Post"
+        }
+      ]
+    }
+  }
 };
